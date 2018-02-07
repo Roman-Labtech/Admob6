@@ -13430,8 +13430,12 @@ ion-img {
   display: inline-block;
   min-width: 20px;
   min-height: 20px;
-  background: #eee;
+  background: #fff;
   contain: strict;
+}
+
+ion-imgalign{
+margin:auto;	
 }
 
 ion-img img {
