@@ -245,61 +245,66 @@ var SecondPage = (function () {
                                 xx = xx * (xx - a) * (xx - b) * (xx - c);
                                 xx = Math.sqrt(xx);
                                 s = xx;
-                                var alert_1 = this.alertCtrl.create({
+                                var alert = this.alertCtrl.create({
                                     title: 'New Friend!',
                                     subTitle: 'Площадь равна S=' + s,
                                     buttons: ['OK']
                                 });
-                                alert_1.present();
+                                alert.present();
                             }
                             else {
-                                var alert_2 = this.alertCtrl.create({
+                                var alert = this.alertCtrl.create({
                                     title: 'Ошибка!',
                                     subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                                     buttons: ['OK']
                                 });
-                                alert_2.present();
+                                alert.present();
                             }
                         }
                         else {
-                            var alert_3 = this.alertCtrl.create({
+                            var alert = this.alertCtrl.create({
                                 title: 'Ошибка!',
                                 subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                                 buttons: ['OK']
                             });
-                            alert_3.present();
+                            alert.present();
                         }
                     }
                     else {
-                        var alert_4 = this.alertCtrl.create({
+                        var alert = this.alertCtrl.create({
                             title: 'Ошибка!',
                             subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                             buttons: ['OK']
                         });
-                        alert_4.present();
+                        alert.present();
                     }
                     ;
                 }
             }
             else {
-                var alert_5 = this.alertCtrl.create({
+                var alert = this.alertCtrl.create({
                     title: 'Ошибка!',
                     subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                     buttons: ['OK']
                 });
-                alert_5.present();
+                alert.present();
             }
         }
         else {
-            var alert_6 = this.alertCtrl.create({
+            var alert = this.alertCtrl.create({
                 title: 'Ошибка!',
                 subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                 buttons: ['OK']
             });
-            alert_6.present();
+            alert.present();
         }
         ;
         //////////////
+    };
+    SecondPage.prototype.tri_storony_clear = function () {
+        this.inp1 = "222255";
+        this.inp2 = "222255";
+        this.inp3 = "222255";
     };
     //ygol_i_2_storony
     SecondPage.prototype.homego = function () {
@@ -307,11 +312,12 @@ var SecondPage = (function () {
     };
     SecondPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'second-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\second\second.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="openPage(homePage)">\n        Т\n      </button>\n      <button ion-item (click)="openPage(friendsPage)">\n        Friends\n      </button>\n      <button ion-item (click)="openPage(eventsPage)">\n        Events\n      </button>\n      <button ion-item (click)="closeMenu()">\n        Close Menu\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Площадь</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3 style="text-align: center; color:white;">По трем сторонам</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n \n  <br>\n<!-- <ion-card (click)="link3stor()">\n  <ion-card-header>\n	  <b>По трем сторонам</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n\n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По основанию и высоте</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n \n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По 2-м сторонам и углу</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n -->\n       <ion-img width="100%" src="assets/imgs/geron.jpg"></ion-img>\n\n  <br>\n<ion-list>\n\n  \n    <ion-item>\n    <ion-label color="primary" fixed>Сторона A</ion-label>\n    <ion-input type="number" placeholder="....." id="inp1" [(ngModel)]="inp1"></ion-input>\n  </ion-item>\n <br>\n  <ion-item>\n    <ion-label color="primary" fixed>Сторона B</ion-label>\n    <ion-input type="number" placeholder="....." id="inp2" [(ngModel)]="inp2"></ion-input>\n  </ion-item>\n <br>\n   <ion-item>\n     <ion-label color="primary" fixed>Сторона C</ion-label>\n    <ion-input type="number" placeholder="....." id="inp3" [(ngModel)]="inp3" ></ion-input>\n  </ion-item><br>\n\n\n</ion-list>\n\n\n    \n    <button ion-button (click)="tri_storony()">\n      ВЫЧИСЛИТЬ\n    </button>\n       \n\n       \n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\second\second.html"*/
+            selector: 'second-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\second\second.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="openPage(homePage)">\n        Т\n      </button>\n      <button ion-item (click)="openPage(friendsPage)">\n        Friends\n      </button>\n      <button ion-item (click)="openPage(eventsPage)">\n        Events\n      </button>\n      <button ion-item (click)="closeMenu()">\n        Close Menu\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Площадь</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3 style="text-align: center; color:white;">По трем сторонам</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n \n  <br>\n<!-- <ion-card (click)="link3stor()">\n  <ion-card-header>\n	  <b>По трем сторонам</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n\n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По основанию и высоте</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n \n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По 2-м сторонам и углу</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n -->\n      <div>\n      <p style="text-align: center;">\n           <ion-img iom-imgalign style="width:100%; height:auto; margin:auto;" src="assets/imgs/geron.jpg"></ion-img>\n		  </p>\n      	\n      </div>\n  \n\n  <br>\n<ion-list>\n\n  \n    <ion-item>\n    <ion-label color="primary" fixed>Сторона A</ion-label>\n    <ion-input type="number" placeholder="....." id="inp1" [(ngModel)]="inp1"></ion-input>\n  </ion-item>\n <br>\n  <ion-item>\n    <ion-label color="primary" fixed>Сторона B</ion-label>\n    <ion-input type="number" placeholder="....." id="inp2" [(ngModel)]="inp2"></ion-input>\n  </ion-item>\n <br>\n   <ion-item>\n     <ion-label color="primary" fixed>Сторона C</ion-label>\n    <ion-input type="number" placeholder="....." id="inp3" [(ngModel)]="inp3" ></ion-input>\n  </ion-item><br>\n\n\n</ion-list>\n\n\n  <div style="background-color: red;">\n   <div style="margin: auto">\n    <button ion-button (click)="tri_storony()">\n      ВЫЧИСЛИТЬ\n    </button>\n          <button ion-button (click)="tri_storony_clear()" color="red-danger">\n      ОЧИСТИТЬ\n    </button>\n    </div>\n  </div>     \n<ion-item Popover>\n  <ion-label>Gender</ion-label>\n  <ion-select [(ngModel)]="gender">\n    <ion-option value="f">Female</ion-option>\n    <ion-option value="m">Male</ion-option>\n    <ion-option value="f1">Female</ion-option>\n    <ion-option value="m1">Male</ion-option>\n  </ion-select>\n</ion-item>\n       \n\n       \n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\second\second.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object])
     ], SecondPage);
     return SecondPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=second.js.map
