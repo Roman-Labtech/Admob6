@@ -1,0 +1,103 @@
+<ion-header>
+ <ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="openPage(homePage)">
+        Т
+      </button>
+      <button ion-item (click)="openPage(friendsPage)">
+        Friends
+      </button>
+      <button ion-item (click)="openPage(eventsPage)">
+        Events
+      </button>
+      <button ion-item (click)="closeMenu()">
+        Close Menu
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+ 
+  <ion-navbar color="red-danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Площадь</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 style="text-align: center; color:white;">По трем сторонам</h3>
+
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  </p>
+ 
+  <br>
+<!-- <ion-card (click)="link3stor()">
+  <ion-card-header>
+	  <b>По трем сторонам</b>
+  </ion-card-header>
+  <ion-card-content>
+    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+  </ion-card-content>
+</ion-card>
+
+  <ion-card (click)="showAlert()">
+  <ion-card-header>
+	  <b>По основанию и высоте</b>
+  </ion-card-header>
+  <ion-card-content>
+    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+  </ion-card-content>
+</ion-card>
+ 
+  <ion-card (click)="showAlert()">
+  <ion-card-header>
+	  <b>По 2-м сторонам и углу</b>
+  </ion-card-header>
+  <ion-card-content>
+    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+  </ion-card-content>
+</ion-card>
+ -->
+       <ion-img width="100%" src="assets/imgs/geron.jpg"></ion-img>
+
+  <br>
+<ion-list>
+
+  
+    <ion-item>
+    <ion-label color="primary" fixed>Сторона A</ion-label>
+    <ion-input type="number" placeholder="....." id="inp1" [(ngModel)]="inp1"></ion-input>
+  </ion-item>
+ <br>
+  <ion-item>
+    <ion-label color="primary" fixed>Сторона B</ion-label>
+    <ion-input type="number" placeholder="....." id="inp2" [(ngModel)]="inp2"></ion-input>
+  </ion-item>
+ <br>
+   <ion-item>
+     <ion-label color="primary" fixed>Сторона C</ion-label>
+    <ion-input type="number" placeholder="....." id="inp3" [(ngModel)]="inp3" ></ion-input>
+  </ion-item><br>
+
+
+</ion-list>
+
+
+    
+    <button ion-button (click)="tri_storony()">
+      ВЫЧИСЛИТЬ
+    </button>
+       
+
+       
+
+</ion-content>

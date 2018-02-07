@@ -1,0 +1,92 @@
+<ion-header>
+ <ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="openPage(homePage)">
+        Т
+      </button>
+      <button ion-item (click)="openPage(friendsPage)">
+        Friends
+      </button>
+      <button ion-item (click)="openPage(eventsPage)">
+        Events
+      </button>
+      <button ion-item (click)="closeMenu()">
+        Close Menu
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+ 
+  <ion-navbar color="red-danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>S треугольника</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 style="text-align: center">Ionic Menu Starter 5.4</h3>
+   <ion-img width="100%" src="baikal.jpg"></ion-img>
+   <ion-img width="100%" src="geron.jpg"></ion-img>
+
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  </p>
+  <br>
+
+  <br>
+ <ion-card (click)="firstgo()">
+  <ion-card-header>
+	  <b>По основанию и высоте</b>
+  </ion-card-header>
+  <ion-card-content>
+    Формула нахождения площади треугольника по основанию и высоте.
+  </ion-card-content>
+</ion-card>
+
+  <ion-card (click)="secondgo()">
+  <ion-card-header>
+	  <b>По трем сторонам</b>
+  </ion-card-header>
+  <ion-card-content>
+    Формула Герона для нахождения площади треугольника по трем известным сторонам.
+  </ion-card-content>
+</ion-card>
+ 
+  <ion-card (click)="thirdgo()">
+  <ion-card-header>
+	  <b>По 2-м сторонам и углу</b>
+  </ion-card-header>
+  <ion-card-content>
+  Формула нахождения площади треугольника по двум сторонам и углу между ними.
+  </ion-card-content>
+</ion-card>
+  <br>
+
+
+<div style="background:url(resources/ios/icon/icon-76@2x.png)"></div>
+	
+
+
+    <br><br>
+    <button ion-button (click)="ygol_i_2_storony1()">Test</button>
+<br><br>
+      <button ion-button secondary (click)="showAlert()" >Show banner</button>
+<br><br>
+    <button ion-button (click)="showInterstitialAd()">Show the interstitial Ad</button>
+    <br><br>
+    
+
+       
+
+       
+
+</ion-content>
