@@ -136,6 +136,12 @@ if (isFinite(c) &&(c>0)){
 
   }
 	
+	tri_storony_clear(){
+		this.inp1="222255";
+		this.inp2="222255";
+		this.inp3="222255";
+	}
+	
 	//ygol_i_2_storony
 	
 
@@ -143,7 +149,7 @@ if (isFinite(c) &&(c>0)){
 		
 	
 homego(){
-		this.navCtrl.push(HomePage);
+ this.navCtrl.push(HomePage);
 }
 
 

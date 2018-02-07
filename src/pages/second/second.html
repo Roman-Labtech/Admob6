@@ -67,7 +67,13 @@
   </ion-card-content>
 </ion-card>
  -->
-       <ion-img width="100%" src="assets/imgs/geron.jpg"></ion-img>
+      <div>
+      <p style="text-align: center;">
+           <ion-img iom-imgalign style="width:100%; height:auto; margin:auto;" src="assets/imgs/geron.jpg"></ion-img>
+		  </p>
+      	
+      </div>
+  
 
   <br>
 <ion-list>
@@ -92,10 +98,25 @@
 </ion-list>
 
 
-    
+  <div style="background-color: red;">
+   <div style="margin: auto">
     <button ion-button (click)="tri_storony()">
       ВЫЧИСЛИТЬ
     </button>
+          <button ion-button (click)="tri_storony_clear()" color="red-danger">
+      ОЧИСТИТЬ
+    </button>
+    </div>
+  </div>     
+<ion-item Popover>
+  <ion-label>Gender</ion-label>
+  <ion-select [(ngModel)]="gender">
+    <ion-option value="f">Female</ion-option>
+    <ion-option value="m">Male</ion-option>
+    <ion-option value="f1">Female</ion-option>
+    <ion-option value="m1">Male</ion-option>
+  </ion-select>
+</ion-item>
        
 
        
