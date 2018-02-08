@@ -33,6 +33,13 @@ export class ThirdPage {
         });
     }
 
+	
+	ygol_i_2_storony_clear(){
+		this.inp1="....";
+		this.inp2="....";
+		this.inp3="....";
+	};
+	
     showInterstitialAd() {
         if (AdMobPro) {
             this.admob.showInterstitial();
