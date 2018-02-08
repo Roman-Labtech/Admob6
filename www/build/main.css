@@ -8983,7 +8983,7 @@ a {
   -webkit-overflow-scrolling: touch;
   will-change: scroll-position;
   contain: size style layout;
-background: url(/assets/imgs/bg.png);	
+background: url(assets/imgs/bg.png);	
 }
 
 ion-content.js-scroll > .scroll-content {
