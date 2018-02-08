@@ -8983,7 +8983,7 @@ a {
   -webkit-overflow-scrolling: touch;
   will-change: scroll-position;
   contain: size style layout;
-  background: url(assets/imgs/bg.png);	
+background: url(/assets/imgs/bg.png);	
 }
 
 ion-content.js-scroll > .scroll-content {
@@ -9012,6 +9012,7 @@ ion-content.has-refresher > .scroll-content {
   bottom: 0;
   position: absolute;
   display: block;
+background: url(/src/assets/imgs/baikal.jpg);
 }
 
 [ion-fixed] {
@@ -13431,12 +13432,8 @@ ion-img {
   display: inline-block;
   min-width: 20px;
   min-height: 20px;
-  background: #fff;
+  background: #eee;
   contain: strict;
-}
-
-ion-imgalign{
-margin:auto;	
 }
 
 ion-img img {
